@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Startseite</title>
+    <title>Tic Tac Toe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="src\css\styles.css">
     <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -12,24 +12,67 @@
     <script src="src/js/localStorage.js"></script>
 </head>
 
-<!--<body onload="includeHTML()">-->
 
 <body>
-
     <main>
-
-
         <article>
-            <section>
-                <!--<div w3-include-html="src/templates/nav.html"></div>-->
-
-            </section>
 
             <section>
+                <div class="playerPanel">
+                    <div class="player">
+                        <img id="circle-player" class="playerShapes" src="src/img/kreis.png" alt="">Player One
+                    </div>
+                    <div class="player">
+                        <img id="cross-player" class="playerShapes" src="src/img/kreuz.png" alt="">Player Two
+                    </div>
+                </div>
+            </section>
+            <section>
+
+                <table>
+                    <tr>
+                        <td onclick="fillShape(0)">
+                            <img id="circle-0" class="shapes d-none" src="src/img/kreis.png" alt="">
+                            <img id="cross-0" class="shapes d-none" src="src/img/kreuz.png" alt=""></td>
+                        <td onclick="fillShape(1)">
+                            <img id="circle-1" class="shapes d-none" src="src/img/kreis.png" alt="">
+                            <img id="cross-1" class="shapes d-none" src="src/img/kreuz.png" alt=""></td>
+                        <td onclick="fillShape(2)">
+                            <img id="circle-2" class="shapes d-none" src="src/img/kreis.png" alt="">
+                            <img id="cross-2" class="shapes d-none" src="src/img/kreuz.png" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <td onclick="fillShape(3)">
+                            <img id="circle-3" class="shapes d-none" src="src/img/kreis.png" alt="">
+                            <img id="cross-3" class="shapes d-none" src="src/img/kreuz.png" alt=""></td>
+                        <td onclick="fillShape(4)">
+                            <img id="circle-4" class="shapes d-none" src="src/img/kreis.png" alt="">
+                            <img id="cross-4" class="shapes d-none" src="src/img/kreuz.png" alt=""></td>
+                        <td onclick="fillShape(5)">
+                            <img id="circle-5" class="shapes d-none" src="src/img/kreis.png" alt="">
+                            <img id="cross-5" class="shapes d-none" src="src/img/kreuz.png" alt=""></td>
+                    </tr>
+
+                    <tr>
+                        <td onclick="fillShape(6)">
+                            <img id="circle-6" class="shapes d-none" src="src/img/kreis.png" alt="">
+                            <img id="cross-6" class="shapes d-none" src="src/img/kreuz.png" alt=""></td>
+                        <td onclick="fillShape(7)">
+                            <img id="circle-7" class="shapes d-none" src="src/img/kreis.png" alt="">
+                            <img id="cross-7" class="shapes d-none" src="src/img/kreuz.png" alt=""></td>
+                        <td onclick="fillShape(8)">
+                            <img id="circle-8" class="shapes d-none" src="src/img/kreis.png" alt="">
+                            <img id="cross-8" class="shapes d-none" src="src/img/kreuz.png" alt=""></td>
+                    </tr>
+                </table>
+
+
+
+
+
 
             </section>
-
-
         </article>
     </main>
 
