@@ -19,13 +19,24 @@
 
             <section>
                 <div class="playerPanel">
-                    <div class="player">
+                    <div id="player-1" class="player">
                         <img id="circle-player" class="playerShapes" src="src/img/kreis.png" alt="">Player One
                     </div>
-                    <div class="player">
+                    <div id="player-2" class="player inactive">
                         <img id="cross-player" class="playerShapes" src="src/img/kreuz.png" alt="">Player Two
                     </div>
                 </div>
+            </section>
+            <section>
+                <div id="line-1" class="line horizontalLine " style="top:395px;"></div>
+                <div id="line-2" class="line horizontalLine " style="top:530px;"></div>
+                <div id="line-3" class="line horizontalLine " style="top:663px;"></div>
+                <div id="line-4" class="line vertikalLine " style="top:535px; left:213px;"></div>
+                <div id="line-5" class="line vertikalLine" style="top:535px; left:348px;"></div>
+                <div id="line-6" class="line vertikalLine" style="top:535px; left:481px;"></div>
+                <div id="line-7" class="line diagonalLineRight" style="top:530px; left:348px;"></div>
+                <div id="line-8" class="line diagonalLineLeft" style="top:530px; left:348px;"></div>
+
             </section>
             <section>
 
@@ -68,11 +79,14 @@
                 </table>
 
 
-
+                <section>
+                    <img src="src/img/gameover.png" alt="" id="gameOver" class="d-none">
+                </section>
 
 
 
             </section>
+
         </article>
     </main>
 
