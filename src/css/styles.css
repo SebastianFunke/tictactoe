@@ -55,6 +55,19 @@ body {
     transform: scaleX(0.0) scaleY(0.0) rotate(45deg);
 }
 
+.diagonalLineLeft {
+    transform: scaleX(0.0) scaleY(0.0) rotate(-45deg);
+}
+
+.lineGroup {
+    position: absolute;
+    height: 399px;
+    width: 399px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @keyframes zoomIn {
     from {
         opacity: 0;
@@ -77,7 +90,7 @@ body {
     right: 0;
     z-index: 200;
     transition: transform 225ms ease-in-out;
-    animation: zoomIn 225ms ease-in-out;
+    animation: zoomIn 425ms ease-in-out;
 }
 
 .line {
@@ -88,10 +101,6 @@ body {
     margin-left: 20px;
     transition: transform 225ms ease-in-out;
     z-index: 100;
-}
-
-.diagonalLineLeft {
-    transform: scaleX(0.0) scaleY(0.0) rotate(-45deg);
 }
 
 .player {
