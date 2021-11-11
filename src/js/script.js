@@ -4,7 +4,11 @@ let gameOver = false;
 
 
 
-
+/**
+ * function to fill a shape which the player chosses
+ * and change the player from cross to circle or the other way
+ * @param {number} id - id from the shape which is clicked
+ */
 function fillShape(id) {
     if (!fields[id] && !gameOver) {
         if (currentShape == 'cross') {
@@ -14,16 +18,16 @@ function fillShape(id) {
         }
         document.getElementById('player-1').classList.toggle('inactive');
         document.getElementById('player-2').classList.toggle('inactive');
-
         fields[id] = currentShape;
-        console.log(fields);
         draw();
         checkForWin();
     }
 }
 
 
-
+/**
+ * Function to draw the player choices by doing remove the d-none class
+ */
 function draw() {
     for (let i = 0; i < fields.length; i++) {
         if (fields[i] == 'circle') {
@@ -37,6 +41,9 @@ function draw() {
     }
 }
 
+/**
+ * checks whether a player has won by having three symbols in a row
+ */
 function checkForWin() {
     let winner;
     if (fields[0] == fields[1] && fields[1] == fields[2] && fields[0]) {
@@ -73,7 +80,6 @@ function checkForWin() {
     }
 
     if (winner) {
-        console.log('winner:' + winner);
         gameOver = true;
         setTimeout(function() {
             document.getElementById('gameOver').classList.remove('d-none');
@@ -82,16 +88,16 @@ function checkForWin() {
 
 }
 
-
+/**
+ * after a player has won, this function is used to reset the game
+ */
 function reset() {
     let shapes = document.getElementsByClassName('shapes');
 
     document.getElementById('gameOver').classList.add('d-none');
     for (let i = 0; i < shapes.length; i++) {
         shapes[i].classList.add('d-none')
-
     }
-
     document.getElementById('line-1').style.transform = 'scaleX(0) ';
     document.getElementById('line-2').style.transform = 'scaleX(0)';
     document.getElementById('line-3').style.transform = 'scaleX(0) ';
@@ -100,7 +106,6 @@ function reset() {
     document.getElementById('line-6').style.transform = 'scaleX(0) scaleY(0) rotate(90deg)';
     document.getElementById('line-7').style.transform = 'scaleX(0) scaleY(0) rotate(45deg)';
     document.getElementById('line-8').style.transform = 'scaleX(0) scaleY(0) rotate(-45deg)';
-
     fields = [];
     gameOver = false;
     currentShape = 'cross';
